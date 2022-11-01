@@ -1,11 +1,9 @@
-import styles from "../styles/Home.module.css";
+import Hero from "../components/home";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <div>
-        <h1>Login Page</h1>
-      </div>
+    <div className="h-screen w-full bg-black pt-40">
+      <Hero />
     </div>
   );
 }

@@ -18,10 +18,6 @@ module.exports = {
       purple: "#c678dd",
     },
 
-    fill: ({ theme }) => ({
-      gray: theme("colors.black"),
-    }),
-
     extend: {},
   },
   plugins: [],
