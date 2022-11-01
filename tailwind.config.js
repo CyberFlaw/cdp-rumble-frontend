@@ -12,13 +12,22 @@ module.exports = {
       white: "#abb2bf",
       red: "#e06b74",
       green: "#98c379",
-      yellow: "e5c07a",
+      yellow: "#e5c07a",
       blue: "#62aeef",
       teal: "#55b6c2",
       purple: "#c678dd",
     },
 
-    extend: {},
+    extend: {
+      height: {
+        90: "90%",
+      },
+      width: {
+        70: "70%",
+        "5%": "5%",
+        20: "20%",
+      },
+    },
   },
   plugins: [],
 };
