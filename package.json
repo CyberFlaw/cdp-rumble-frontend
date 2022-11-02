@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.9.2",
+    "emoji-picker-react": "^4.4.4",
     "next": "13.0.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tailwind-scrollbar": "^2.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

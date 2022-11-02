@@ -10,7 +10,13 @@ export default function Dashboard() {
       <dir className="flex items-center justify-center p-4 rounded-3xl bg-black">
         <Image src={logo} alt="logo" height={40} width={40} />
       </dir>
-      <RecentUsers />
+      <div className="flex items-start justify-start flex-col h-full py-5 scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100">
+        <RecentUsers icon="A" color={0} />
+        <RecentUsers icon="B" color={1} />
+        <RecentUsers icon="I" color={2} />
+        <RecentUsers icon="L" color={3} />
+        <RecentUsers icon="S" color={4} />
+      </div>
       <dir className="flex items-center justify-center p-4 rounded-3xl bg-black">
         <Image src={cog} alt="logo" height={40} width={40} />
       </dir>

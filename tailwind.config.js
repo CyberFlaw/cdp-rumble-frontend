@@ -16,6 +16,7 @@ module.exports = {
       blue: "#62aeef",
       teal: "#55b6c2",
       purple: "#c678dd",
+      plane: "#ffffff",
     },
 
     extend: {
@@ -23,11 +24,18 @@ module.exports = {
         90: "90%",
       },
       width: {
-        70: "70%",
+        "70%": "70%",
         "5%": "5%",
-        20: "20%",
+        "20%": "20%",
+        "50%": "52%",
+      },
+      minHeight: {
+        14: "3.5rem",
+      },
+      minWidth: {
+        14: "3.5rem",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };
