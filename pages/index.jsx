@@ -10,11 +10,8 @@ export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  // const [signOut, _loading, _error] = useSignOut(auth);
 
   useEffect(() => {
-    console.log(user);
-
     if (user) setIsLoggedIn(true);
     else setIsLoggedIn(false);
   }, [user]);

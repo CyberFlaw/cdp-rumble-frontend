@@ -14,7 +14,7 @@ export default function Message(props) {
     */
 
   return props.type === "send" ? (
-    <div className="rounded-2xl text-lg py-2 px-4 text-black font-medium bg-green mb-6 mx-16 ml-4">
+    <div className="rounded-2xl text-lg py-2 px-4 text-black font-medium bg-green mb-6 mx-16 mr-4">
       <div>
         <h3>{props.text}</h3>
       </div>
@@ -34,7 +34,7 @@ export default function Message(props) {
       </div>
     </div>
   ) : (
-    <div className="rounded-2xl text-lg py-2 px-4 text-black font-medium bg-teal mb-6 mx-16 mr-4">
+    <div className="rounded-2xl text-lg py-2 px-4 text-black font-medium bg-teal mb-6 mx-16 ml-4">
       <div>
         <h3>{props.text}</h3>
       </div>

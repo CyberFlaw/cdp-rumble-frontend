@@ -2,7 +2,7 @@ import Message from "./messgae";
 
 export default function MessageBuffer(props) {
   return (
-    <div className="h-70 w-full pt-10 pb-4 scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 max-w-full">
+    <div className="h-70 w-full pt-10 pb-4 scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 max-w-full snap-y">
       {/* 
           ------------------------------------------------------------------------------------------------
           [This part cannoy be implemented due to the lack off time and unability to host the backend]
@@ -23,6 +23,8 @@ export default function MessageBuffer(props) {
         type="send"
         text="The backend is created in Actix Web framework in Rust. I used this specific framework due to the availability of both HTTP and WSS support and its blazing-fast speed "
       />
+
+      {props.msg.map((val) => val)}
     </div>
   );
 }

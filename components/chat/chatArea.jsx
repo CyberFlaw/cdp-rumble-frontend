@@ -15,24 +15,31 @@ export default function ChatArea(props) {
     [This part cannoy be implemented due to the lack off time and unability to host the backend]
 
     - The messages for the room are fetched from the database, and its stored as a list
+    - Sync the mesages to database when ever a 10 message is sent or any member disconnects
     - The list is then passed to the MessageBuffer Component
     -----------------------------------------------------------------------------
     */
   // }, []);
 
   const [text, setText] = useState("");
+  const [message, setMessage] = useState([]);
 
   const sendMessage = () => {
     const textval = text;
+
+    const msg = <Message type="send" text={text} />;
+    setMessage([...message, msg]);
+
+    // Add database sync POST request
+
     setText("");
-    console.log(textval);
   };
 
   return (
     <div className="bg-white w-30% h-screen rounded-3xl flex items-center justify-between flex-col min-w-30">
       <CurrentChatNav />
       <div className="w-full h-full">
-        <MessageBuffer />
+        <MessageBuffer msg={message} />
         <div className="w-full grid place-items-center mt-4 ">
           {/* text editor */}
           <div className="w-70% rounded-2xl bg-plane flex flex-row">
