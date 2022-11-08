@@ -1,12 +1,12 @@
 import React from "react";
-import { UserProvider } from "@auth0/nextjs-auth0";
+import AuthContextWrapper from "../context/authContext";
 
-import styles from "../styles/globals.css";
+import "../styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   return (
-    <UserProvider>
+    <AuthContextWrapper>
       <Component {...pageProps} />
-    </UserProvider>
+    </AuthContextWrapper>
   );
 }

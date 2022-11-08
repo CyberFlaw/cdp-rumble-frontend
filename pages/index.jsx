@@ -1,9 +1,28 @@
+import { useContext, useEffect, useState } from "react";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+
+import { AuthContext } from "../context/authContext";
 import Hero from "../components/home/hero.jsx";
+import Chat from "../components/chat/chat";
 
 export default function Home() {
+  const { auth } = useContext(AuthContext);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  // const [signOut, _loading, _error] = useSignOut(auth);
+
+  useEffect(() => {
+    console.log(user);
+
+    if (user) setIsLoggedIn(true);
+    else setIsLoggedIn(false);
+  }, [user]);
+
   return (
-    <div className="h-screen w-full bg-black pt-40">
-      <Hero />
+    // make a spinner
+    <div className="h-screen w-full bg-black">
+      {user ? <Chat user={user} /> : <Hero signIn={signInWithGoogle} />}
     </div>
   );
 }

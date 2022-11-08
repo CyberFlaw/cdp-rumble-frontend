@@ -1,7 +1,8 @@
 import Image from "next/image";
+
 import google from "../../public/assets/google.png";
 
-export default function Hero() {
+export default function Hero(props) {
   return (
     <div className="relative py-16 bg-gradient-to-br from-sky-50 to-gray-200">
       <div className="relative container m-auto px-6 text-gray-500 md:px-12 xl:px-40">
@@ -18,23 +19,24 @@ export default function Hero() {
                 <button
                   className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 
  hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
+                  onClick={() => {
+                    props.signIn();
+                  }}
                 >
-                  <a href="/api/auth/login" className="text-center">
-                    <div className="relative flex items-center space-x-4 justify-center">
-                      <div className="flex justify-center items-center">
-                        <Image
-                          src={google}
-                          alt="google"
-                          height={32}
-                          width={32}
-                          className="mr-2"
-                        />
-                        <h3 className="block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">
-                          Sign In To Continue
-                        </h3>
-                      </div>
+                  <div className="relative flex items-center space-x-4 justify-center">
+                    <div className="flex justify-center items-center">
+                      <Image
+                        src={google}
+                        alt="google"
+                        height={32}
+                        width={32}
+                        className="mr-2"
+                      />
+                      <h3 className="block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">
+                        Sign In To Continue
+                      </h3>
                     </div>
-                  </a>
+                  </div>
                 </button>
               </div>
             </div>
